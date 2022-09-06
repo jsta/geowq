@@ -1,0 +1,10 @@
+name: cbofs
+channels:
+- conda-forge
+dependencies:
+        - matplotlib
+        - xarray
+        - rioxarray
+        - netcdf4
+        - gdal
+        - geopandas
