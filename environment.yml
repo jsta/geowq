@@ -6,5 +6,4 @@ dependencies:
         - xarray
         - rioxarray
         - netcdf4
-        - gdal
-        - geopandas
+        
