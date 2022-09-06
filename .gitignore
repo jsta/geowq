@@ -1,0 +1,11 @@
+*.gif
+*.gpkg
+.vscode
+__pycache__
+data/*.csv
+data/*.gpkg
+data/*.md
+data/*.pkl
+data/*.png
+data/*.tif
+figures
