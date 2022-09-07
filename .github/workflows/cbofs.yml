@@ -22,7 +22,22 @@ jobs:
           channels: conda-forge
           auto-activate-base: false          
 
-      - name: Install dependencies
+      - name: Check environment
         run: |
           conda info
+          conda list
+
+      - name: Pull data
+        run: |-
+          current_date = `date +%Y%m%d`
+          python scripts/00_get_cbofs.py --tod $current_date
+
+      - name: Commit and push data if changed
+        run: |-
+          git diff
+          git config --global user.email "readme-bot@example.com"
+          git config --global user.name "README-bot"
+          git add -A
+          git commit -m "Updated data" || exit 0
+          git push
           
