@@ -1,6 +1,8 @@
 name: cbofs
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '15 12 * * *'  # run workflow at 12:15 daily
 
 jobs:
   build:
